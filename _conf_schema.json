@@ -1,0 +1,53 @@
+{
+    "broadcast_max_delay": {
+        "description": "广播消息的最大延迟秒数",
+        "hint": "每个目标发送前使用 0 到该值的随机延迟，用于降低群发风控风险",
+        "type": "float",
+        "slider": {
+            "min": 0.0,
+            "max": 3.0,
+            "step": 0.01
+        },
+        "default": 1.1
+    },
+    "history_check_count": {
+        "description": "不活跃会话检查消息数",
+        "hint": "广播前检查最近多少条消息。如果上次广播仍在其中，本轮将跳过该会话。设为 0 可关闭跳过功能",
+        "type": "int",
+        "slider": {
+            "min": 0,
+            "max": 100,
+            "step": 1
+        },
+        "default": 10
+    },
+    "record_retention_count": {
+        "description": "保留的广播批次数",
+        "hint": "限制可用于撤回的源消息批次数，超出后删除最早的批次记录",
+        "type": "int",
+        "slider": {
+            "min": 1,
+            "max": 100,
+            "step": 1
+        },
+        "default": 10
+    },
+    "skip_source": {
+        "description": "是否跳过广播源头",
+        "type": "bool",
+        "hint": "发送广播命令时，是否跳过当前群聊或私聊，避免在源头会话重复发送",
+        "default": true
+    },
+    "disable_gids": {
+        "description": "关闭广播的群聊",
+        "type": "list",
+        "hint": "关闭广播的群聊将不再接收广播消息",
+        "default": []
+    },
+    "disable_uids": {
+        "description": "关闭私聊广播的好友",
+        "type": "list",
+        "hint": "被禁用的好友将不会收到私聊广播",
+        "default": []
+    }
+}
