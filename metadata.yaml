@@ -2,7 +2,7 @@ name: astrbot_plugin_broadcast
 display_name: 广播助手
 desc: 一键群广播，所有适配器支持的格式都能发
 help: 略
-version: v1.2.0
+version: v1.2.1
 author: 饰乐
 repo: https://github.com/Zhalstar/astrbot_plugin_broadcast
 support_platforms:
